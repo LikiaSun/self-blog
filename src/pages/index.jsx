@@ -1,11 +1,11 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Link, graphql } from "gatsby";
 
 import "../scss/style.scss";
 
+import Bio from "../components/bio";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
-const Bio = lazy(() => import("../components/bio"));
 
 export default function BlogIndex({ location, data }) {
   const siteTitle = data.site.siteMetadata.title;
@@ -14,9 +14,7 @@ export default function BlogIndex({ location, data }) {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Bio />
-      </Suspense>
+      <Bio />
       <div className="main-article">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
