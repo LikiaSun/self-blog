@@ -1,0 +1,54 @@
+.bio {
+  display: flex;
+  width: 100vw;
+  height: 155px;
+  margin-bottom: 20px;
+  justify-content: center;
+  @include mobile-width {
+    height: fit-content;
+  }
+  .bio-content {
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: $text-white;
+    @include mobile-width {
+      margin-left: 2rem;
+      justify-content: center;
+      max-width: 50vw;
+    }
+    h1 {
+      display: inline;
+      margin: 0;
+      font-weight: 300;
+      @include mobile-width {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 100;
+    }
+    .bio-introduce {
+      font-size: 16px;
+      margin-bottom: 0rem;
+    }
+  }
+}
+.bio-social-bar {
+  display: inline;
+  position: relative;
+  bottom: 5px;
+  margin-left: 0.5rem;
+  @include mobile-width {
+    margin-left: 0;
+  }
+}
+.bio-social-item {
+  width: 23px !important;
+  height: 23px !important;
+}

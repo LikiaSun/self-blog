@@ -3,9 +3,9 @@ module.exports = {
     title: `Likia Blog`,
     author: `Likia Sun`,
     description: `Note by a 17 years old full stack developer.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://likia-blog.netlify.com/`,
     social: {
-      twitter: `https://twitter.com/likkeak`,
+      twitter: `likkeak`,
     },
   },
   plugins: [
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Likia Blog`,
+        short_name: `Likia Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -74,5 +74,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-sass`,
   ],
-}
+};

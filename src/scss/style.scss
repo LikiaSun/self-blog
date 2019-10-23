@@ -1,0 +1,14 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "./blog/layout-header";
+@import "./blog/bio-card";
+@import "layout";
+
+body {
+  background-image: linear-gradient(
+    356.9deg,
+    rgb(8, 12, 19) 51.2%,
+    rgb(42, 50, 59) 91.1%
+  );
+}
