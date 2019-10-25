@@ -2,7 +2,7 @@ import React from "react";
 import { kebabCase } from "lodash";
 import { Link, graphql } from "gatsby";
 
-import SEO from "@components/Seo";
+import SEO from "@components/seo";
 import Layout from "@components/Layout";
 
 export default function TagsPage({ location, data }) {
