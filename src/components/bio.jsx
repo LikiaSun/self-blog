@@ -4,7 +4,7 @@ import Image from "gatsby-image";
 import { SocialIcon } from "react-social-icons";
 
 const Bio = () => {
-  const [avatarSize, setAvatarSize] = useState(77);
+  const [avatarSize, setAvatarSize] = useState(0);
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
@@ -24,6 +24,14 @@ const Bio = () => {
       }
     }
   `);
+
+  useEffect(() => {
+    if (window.innerWidth >= 420) {
+      setAvatarSize(150);
+    } else {
+      setAvatarSize(77);
+    }
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {

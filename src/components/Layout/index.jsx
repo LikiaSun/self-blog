@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import "../../scss/style.scss";
 
 export default function Layout({ location, title, children }) {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -10,11 +11,11 @@ export default function Layout({ location, title, children }) {
           location.pathname === rootPath ? "" : "-article"
         }`}
       >
-        <h1>
+        <h1 className="main-header">
           <Link to={`/`}>{title}</Link>
         </h1>
       </header>
-      <main>{children}</main>
+      <>{children}</>
       <footer className="main-footer">
         © {new Date().getFullYear()}, Built by
         {` `}
