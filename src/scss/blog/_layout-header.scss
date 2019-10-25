@@ -6,7 +6,8 @@
   height: 84px;
   text-align: center;
   margin-bottom: 2rem;
-  h1 {
+  h1,
+  a {
     margin-top: 0;
     font-size: 36px;
     line-height: 84px;
@@ -18,6 +19,7 @@
 .main-footer {
   width: 100vw;
   height: 63px;
+  position: relative;
   padding-top: 10px;
   text-align: center;
   background: #1d1d1d;
@@ -39,7 +41,7 @@
     max-width: 100%;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.17);
     h3 {
-      font-weight: normal;
+      font-weight: 100;
     }
     time {
       font-weight: 100;
@@ -47,9 +49,11 @@
     }
   }
   .main-article-header {
-    line-height: 48px;
-    @include mobile-width {
-      line-height: 30px;
-    }
+    line-height: 30px;
+    height: 30px;
   }
+}
+
+.main-child {
+  min-height: calc(100vh - 200px);
 }

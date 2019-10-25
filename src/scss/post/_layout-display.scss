@@ -1,0 +1,28 @@
+.post-main-content {
+  width: 80vw;
+  padding: 20px;
+  margin: 0 10vw;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  header {
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid #222222;
+    h1 {
+      font-weight: 500;
+      margin-right: 10px;
+      display: inline;
+    }
+    time {
+      font-size: 12px;
+    }
+  }
+  footer {
+    h1,
+    strong,
+    p {
+      color: black !important;
+    }
+  }
+}

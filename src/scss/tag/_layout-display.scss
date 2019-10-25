@@ -1,0 +1,26 @@
+.tag-header {
+  color: $text-white;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+  h1 {
+    font-weight: 100;
+    margin-bottom: 0;
+  }
+  small {
+    margin-bottom: 10px;
+  }
+}
+
+.tag-main {
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+.tag-list {
+  color: $text-white;
+  list-style: none;
+  time {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
