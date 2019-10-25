@@ -1,0 +1,23 @@
+.tags-container {
+  margin-bottom: 5px;
+}
+
+.tags-list {
+  list-style-type: none;
+  display: inline;
+  li {
+    margin-bottom: 0 !important;
+    width: fit-content;
+  }
+}
+
+ul {
+  display: inline;
+  li {
+    display: inline;
+  }
+}
+
+.tag-style-System {
+  background: grey;
+}

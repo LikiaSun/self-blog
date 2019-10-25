@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin pad-width() {
+  @media all and (max-width: $pad-media) {
+    @content;
+  }
+}
