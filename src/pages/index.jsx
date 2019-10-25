@@ -5,9 +5,9 @@ import { Link, graphql } from "gatsby";
 import "../scss/style.scss";
 import "../scss/tag/tag-style.scss";
 
-import Bio from "../components/Bio";
-import SEO from "../components/Seo";
-import Layout from "../components/Layout";
+import Bio from "@components/Bio";
+import SEO from "@components/Seo";
+import Layout from "@components/Layout";
 
 export default function BlogIndex({ location, data }) {
   const siteTitle = data.site.siteMetadata.title;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import SEO from "../components/Seo";
-import Layout from "../components/Layout";
+import SEO from "@components/Seo";
+import Layout from "@components/Layout";
 import "../scss/tag/style.scss";
 
 export default function Tags({ location, pageContext, data }) {

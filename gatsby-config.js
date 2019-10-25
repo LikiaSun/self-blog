@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: `Likia Blog`,
@@ -75,5 +77,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "src/components"),
+          "@templates": path.resolve(__dirname, "src/templates"),
+          "@pages": path.resolve(__dirname, "src/pages"),
+        },
+        extensions: ["js", "jsx"],
+      },
+    },
   ],
 };
