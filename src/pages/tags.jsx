@@ -2,8 +2,8 @@ import React from "react";
 import { kebabCase } from "lodash";
 import { Link, graphql } from "gatsby";
 
-import SEO from "../components/Seo";
-import Layout from "../components/Layout";
+import SEO from "@components/Seo";
+import Layout from "@components/Layout";
 
 export default function TagsPage({ location, data }) {
   const allTags = data.allMarkdownRemark.group;

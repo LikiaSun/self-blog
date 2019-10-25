@@ -1,10 +1,9 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Bio from "../components/Bio";
-import SEO from "../components/Seo";
-import Layout from "../components/Layout";
-import { rhythm } from "../utils/typography";
+import Bio from "@components/Bio";
+import SEO from "@components/Seo";
+import Layout from "@components/Layout";
 
 import "../scss/post/style.scss";
 import "../scss/post/github-markdown.css";
@@ -33,7 +32,7 @@ export default function BlogPostTemplate({ location, data, pageContext }) {
             />
             <hr
               style={{
-                marginBottom: rhythm(1),
+                marginBottom: "10px",
               }}
             />
             <footer>
