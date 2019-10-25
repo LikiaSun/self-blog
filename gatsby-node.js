@@ -1,10 +1,12 @@
+const _ = require("lodash");
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.jsx`);
+  const blogPost = path.resolve(`./src/templates/PostTemplate.jsx`);
+  const tagPage = path.resolve(`./src/templates/TagTemplate.jsx`);
   const result = await graphql(
     `
       {
@@ -19,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
           }
@@ -46,6 +49,22 @@ exports.createPages = async ({ graphql, actions }) => {
         previous,
         next,
       },
+    });
+  });
+
+  // create Tags pages
+  let tags = [];
+  _.each(posts, edge => {
+    if (_.get(edge, "node.frontmatter.tags")) {
+      tags = tags.concat(edge.node.frontmatter.tags);
+    }
+  });
+  tags = _.uniq(tags);
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagPage,
+      context: { tag },
     });
   });
 };
